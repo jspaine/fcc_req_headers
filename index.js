@@ -6,6 +6,8 @@ http.createServer(function(req, res) {
   if (urlPath === '/api/whoami') {
     res.writeHead(200, {'Content-Type': 'text/json'});
     res.write(JSON.stringify(parseHeaders(req.headers)));
+  } else {
+    res.writeHead(302, {'Location': '/api/whoami'});
   }
   res.end();
   console.log(req.headers);
