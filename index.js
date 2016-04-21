@@ -13,8 +13,8 @@ function parseHeaders(headers) {
   lang = headers['accept-language'].split(',')[0];
   soft = headers['user-agent'].match(/\(([^\)]+)\)/)[1];
   return {
-    ip: ip,
-    lang: lang,
-    soft: soft
+    ipaddress: ip,
+    language: lang,
+    software: soft
   };
 }
